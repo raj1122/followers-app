@@ -1,0 +1,10 @@
+
+<h1>Home Page</h1>
+<p *ngIf="getLogged()">
+  Welcome {{ getName() }}
+</p>
+<ul>
+  <li *ngIf="getLogged() "><a routerLink="/admin">Admin</a></li>
+  <li *ngIf="!getLogged()"><a routerLink="/login">Login</a></li>
+  <li  *ngIf="getLogged()"><a (click)="getLoggedOut()">Logout</a></li>
+</ul>
